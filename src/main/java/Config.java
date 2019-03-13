@@ -1,5 +1,6 @@
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import postprocessors.Mypricess1;
 
 /**
  * @description:
@@ -13,5 +14,10 @@ public class Config {
         User user = new User();
         user.setId("11111111111");
         return user;
+    }
+
+    @Bean
+    public Mypricess1 mypricess1() {
+        return new Mypricess1();
     }
 }

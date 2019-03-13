@@ -1,3 +1,6 @@
+import cla.Cl1;
+import interfac.A1;
+import interfac.A2;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
@@ -12,6 +15,9 @@ public class StartMain {
         AnnotationConfigApplicationContext applicationContext=new AnnotationConfigApplicationContext(Config.class);
         User bean = applicationContext.getBean(User.class);
         System.out.println(bean);
+        Cl1 cl1=new Cl1();
+        System.out.println(cl1 instanceof A1);
+        System.out.println(cl1 instanceof A2);
 
     }
 
